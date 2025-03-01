@@ -3,7 +3,7 @@
  * Если строка является числом, функция должна возвращать true, в противном случае - false.
  */
 const isNumeric = (str) => {
-    if (str.length > 0) { 
+    if (str.length < 0 || str !== " ") { 
         if (!isNaN(str)) {
             return true;
         } else {
@@ -12,4 +12,4 @@ const isNumeric = (str) => {
     }
     return false;
 }
-console.log(isNumeric('u'));
+console.log(isNumeric('5'));
